@@ -13,6 +13,9 @@
 		941CB0B81BA586E600622A51 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 941CB0B71BA586E600622A51 /* Images.xcassets */; };
 		941CB0BB1BA586E600622A51 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 941CB0B91BA586E600622A51 /* LaunchScreen.xib */; };
 		941CB0C71BA586E600622A51 /* switchViewsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941CB0C61BA586E600622A51 /* switchViewsTests.swift */; };
+		941CB0D31BA5946D00622A51 /* switchIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 941CB0D21BA5946D00622A51 /* switchIcon.png */; };
+		941CB0D71BA59BF100622A51 /* JNWSpringAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 941CB0D61BA59BF100622A51 /* JNWSpringAnimation.m */; };
+		941CB0DA1BA59BFD00622A51 /* NSValue+JNWAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 941CB0D91BA59BFD00622A51 /* NSValue+JNWAdditions.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +39,12 @@
 		941CB0C01BA586E600622A51 /* switchViewsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = switchViewsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		941CB0C51BA586E600622A51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		941CB0C61BA586E600622A51 /* switchViewsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = switchViewsTests.swift; sourceTree = "<group>"; };
+		941CB0D21BA5946D00622A51 /* switchIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = switchIcon.png; sourceTree = "<group>"; };
+		941CB0D41BA59BF000622A51 /* switchViews-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "switchViews-Bridging-Header.h"; sourceTree = "<group>"; };
+		941CB0D51BA59BF100622A51 /* JNWSpringAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JNWSpringAnimation.h; sourceTree = "<group>"; };
+		941CB0D61BA59BF100622A51 /* JNWSpringAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JNWSpringAnimation.m; sourceTree = "<group>"; };
+		941CB0D81BA59BFD00622A51 /* NSValue+JNWAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSValue+JNWAdditions.h"; sourceTree = "<group>"; };
+		941CB0D91BA59BFD00622A51 /* NSValue+JNWAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSValue+JNWAdditions.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,11 +86,17 @@
 		941CB0AD1BA586E600622A51 /* switchViews */ = {
 			isa = PBXGroup;
 			children = (
+				941CB0D51BA59BF100622A51 /* JNWSpringAnimation.h */,
+				941CB0D61BA59BF100622A51 /* JNWSpringAnimation.m */,
+				941CB0D81BA59BFD00622A51 /* NSValue+JNWAdditions.h */,
+				941CB0D91BA59BFD00622A51 /* NSValue+JNWAdditions.m */,
+				941CB0D41BA59BF000622A51 /* switchViews-Bridging-Header.h */,
 				941CB0B01BA586E600622A51 /* AppDelegate.swift */,
 				941CB0B21BA586E600622A51 /* ViewController.swift */,
 				941CB0B41BA586E600622A51 /* Main.storyboard */,
 				941CB0B71BA586E600622A51 /* Images.xcassets */,
 				941CB0B91BA586E600622A51 /* LaunchScreen.xib */,
+				941CB0D21BA5946D00622A51 /* switchIcon.png */,
 				941CB0AE1BA586E600622A51 /* Supporting Files */,
 			);
 			path = switchViews;
@@ -192,6 +207,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				941CB0D31BA5946D00622A51 /* switchIcon.png in Resources */,
 				941CB0B61BA586E600622A51 /* Main.storyboard in Resources */,
 				941CB0BB1BA586E600622A51 /* LaunchScreen.xib in Resources */,
 				941CB0B81BA586E600622A51 /* Images.xcassets in Resources */,
@@ -212,7 +228,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				941CB0DA1BA59BFD00622A51 /* NSValue+JNWAdditions.m in Sources */,
 				941CB0B31BA586E600622A51 /* ViewController.swift in Sources */,
+				941CB0D71BA59BF100622A51 /* JNWSpringAnimation.m in Sources */,
 				941CB0B11BA586E600622A51 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -340,9 +358,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = switchViews/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "switchViews/switchViews-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -350,9 +371,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = switchViews/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "switchViews/switchViews-Bridging-Header.h";
 			};
 			name = Release;
 		};
